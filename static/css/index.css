@@ -1308,5 +1308,41 @@ a:focus {
   height: min(80vw, 640px);
 }
 
+.project-subtitle {
+  color: var(--text-primary);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.12;
+  max-width: 1120px;
+  margin: -1rem auto 2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .project-subtitle {
+    font-size: 2rem;
+    line-height: 1.18;
+    margin-top: -0.5rem;
+  }
+}
+
+.publication-header .publication-authors {
+  line-height: 1.25;
+  margin-bottom: 0.65rem;
+}
+
+.publication-header .author-block {
+  margin-right: 0.35rem;
+  margin-bottom: 0.15rem;
+}
+
+.publication-header .publication-venue {
+  margin-top: 0.35rem;
+  padding: 0.35rem 0.75rem;
+}
+
+.publication-header .eql-cntrb small {
+  line-height: 1.15;
+}
+
 
 
