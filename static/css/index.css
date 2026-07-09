@@ -528,6 +528,8 @@ body {
 
 .pdf-panel {
   width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
@@ -535,15 +537,28 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-.pdf-panel object {
+.pdf-panel object,
+.pdf-panel iframe {
   display: block;
   width: 100%;
-  height: min(78vh, 780px);
+  height: min(82vh, 760px);
   border: 0;
 }
 
-.pipeline-panel object {
-  height: min(82vh, 860px);
+.pipeline-panel object,
+.pipeline-panel iframe {
+  height: min(82vh, 760px);
+}
+
+.figure-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-fallback-link {
+  display: none;
 }
 
 .pdf-panel img {
@@ -574,7 +589,23 @@ body {
   gap: 1.25rem;
 }
 
+.individual-carousel {
+  max-width: 760px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.individual-carousel .item {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
 .example-video-card {
+  width: min(100%, 640px);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   background: #ffffff;
@@ -685,7 +716,9 @@ body {
   }
 
   .pdf-panel object,
-  .pipeline-panel object {
+  .pdf-panel iframe,
+  .pipeline-panel object,
+  .pipeline-panel iframe {
     height: 58vh;
   }
 
@@ -1225,6 +1258,32 @@ a:focus {
     color: var(--text-primary) !important;
     box-shadow: none !important;
   }
+}
+
+/* Final page-specific overrides */
+.individual-carousel.results-carousel .item {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto !important;
+  padding: 1rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.individual-carousel.results-carousel .item:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.individual-carousel .example-video-card {
+  margin: 0 auto;
+}
+
+.individual-carousel .example-video-card video {
+  width: min(100%, 640px);
+  height: min(80vw, 640px);
 }
 
 

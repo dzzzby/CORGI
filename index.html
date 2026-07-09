@@ -151,6 +151,12 @@
                     <span>Animation</span>
                   </a>
                 </span>
+                <span class="link-block">
+                  <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-quote-right"></i></span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -164,10 +170,9 @@
         <p class="section-lead has-text-centered">
           Overview of the CORGI reconstruction pipeline.
         </p>
-        <div class="pdf-panel pipeline-panel">
-          <object data="static/pdfs/pipeline.pdf" type="application/pdf" aria-label="CORGI pipeline figure">
-            <img src="static/images/pipeline.png" alt="CORGI pipeline figure" loading="lazy">
-          </object>
+        <div class="pdf-panel figure-panel pipeline-panel">
+          <iframe src="static/pdfs/pipeline.pdf#toolbar=0&navpanes=0&view=FitH" title="CORGI pipeline figure"></iframe>
+          <a class="pdf-fallback-link" href="static/pdfs/pipeline.pdf" target="_blank">Open pipeline PDF</a>
         </div>
       </div>
     </section>
@@ -192,26 +197,26 @@
         <p class="section-lead has-text-centered">
           Per-example reconstruction videos.
         </p>
-        <div class="example-video-grid">
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0059.mp4" type="video/mp4"></video><p>dog_0059</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0097.mp4" type="video/mp4"></video><p>dog_0097</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0099.mp4" type="video/mp4"></video><p>dog_0099</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0140.mp4" type="video/mp4"></video><p>dog_0140</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0169.mp4" type="video/mp4"></video><p>dog_0169</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0184.mp4" type="video/mp4"></video><p>dog_0184</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_12.mp4" type="video/mp4"></video><p>dog_12</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_13.mp4" type="video/mp4"></video><p>dog_13</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_14.mp4" type="video/mp4"></video><p>dog_14</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_16.mp4" type="video/mp4"></video><p>dog_16</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_23.mp4" type="video/mp4"></video><p>dog_23</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_26.mp4" type="video/mp4"></video><p>dog_26</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_30.mp4" type="video/mp4"></video><p>dog_30</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_42.mp4" type="video/mp4"></video><p>dog_42</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_43.mp4" type="video/mp4"></video><p>dog_43</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_47.mp4" type="video/mp4"></video><p>dog_47</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_52.mp4" type="video/mp4"></video><p>dog_52</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_53.mp4" type="video/mp4"></video><p>dog_53</p></article>
-          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_6.mp4" type="video/mp4"></video><p>dog_6</p></article>
+        <div id="individual-carousel" class="carousel results-carousel individual-carousel">
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0059.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0097.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0099.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0140.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0169.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0184.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_12.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_13.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_14.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_16.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_23.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_26.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_30.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_42.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_43.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_47.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_52.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_53.mp4" type="video/mp4"></video></article></div>
+          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_6.mp4" type="video/mp4"></video></article></div>
         </div>
       </div>
     </section>
@@ -222,10 +227,9 @@
         <p class="section-lead has-text-centered">
           Driving and animation application examples.
         </p>
-        <div class="pdf-panel animation-panel">
-          <object data="static/pdfs/animation.pdf" type="application/pdf" aria-label="CORGI animation application figure">
-            <a href="static/pdfs/animation.pdf" target="_blank">Open animation figure PDF</a>
-          </object>
+        <div class="pdf-panel figure-panel animation-panel">
+          <iframe src="static/pdfs/animation.pdf#toolbar=0&navpanes=0&view=FitH" title="CORGI animation application figure"></iframe>
+          <a class="pdf-fallback-link" href="static/pdfs/animation.pdf" target="_blank">Open animation PDF</a>
         </div>
       </div>
     </section>
@@ -233,6 +237,24 @@
     <!-- 3DGS/SuperSplat viewer disabled for the current public page.
     <section class="section hero is-light" id="gaussian-viewer"></section>
     -->
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{wu2026corgi,
+  title={CORGI: Consistency-Aware 3D Dog Reconstruction from a Single Image in the Wild},
+  author={Wu, Yuxiao and Li, Weile and Zhu, Boyi and Liu, Yumeng and Cai, Youcheng and Liu, Ligang},
+  journal={arXiv preprint arXiv:2607.00321},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
