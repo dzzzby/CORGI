@@ -128,21 +128,27 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fab fa-github"></i></span>
-                    <span>Code</span>
+                  <a href="#pipeline" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-project-diagram"></i></span>
+                    <span>Pipeline</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#gaussian-viewer" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-cube"></i></span>
-                    <span>3DGS Viewer</span>
+                  <a href="#overview-video" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-play"></i></span>
+                    <span>Overview</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-quote-right"></i></span>
-                    <span>BibTeX</span>
+                  <a href="#individual-results" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-video"></i></span>
+                    <span>Examples</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#animation" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-running"></i></span>
+                    <span>Animation</span>
                   </a>
                 </span>
               </div>
@@ -152,217 +158,81 @@
       </div>
     </section>
 
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <div class="media-placeholder video-placeholder">
-            <div class="placeholder-icon"><i class="fas fa-play"></i></div>
-            <p class="placeholder-title">Teaser Video Placeholder</p>
-            <p class="placeholder-copy">Replace with <code>static/videos/banner_video.mp4</code> when the official CORGI teaser is ready.</p>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            CORGI reconstructs a high-fidelity 3DGS dog in canonical pose from one in-the-wild image, producing visually coherent and animatable assets for downstream applications.
-          </h2>
-        </div>
-      </div>
-    </section>
-
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                CORGI reconstructs high-fidelity 3D dog assets from a single in-the-wild image without relying on paired 3D supervision. The framework first turns an arbitrary input pose into a canonical 360-degree pseudo multi-view sequence, then optimizes a consistency-aware deformable 3D Gaussian representation anchored by a D-SMAL dog prior, and finally repairs view-dependent artifacts with a self-supervised generative module.
-              </p>
-              <p>
-                The resulting models are designed to preserve breed-level appearance, reduce cross-view generative inconsistencies, and support realistic animation. Media blocks on this page are intentionally left as placeholders for the final pipeline figure, comparison images, videos, poster, and interactive SuperSplat scene.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section pipeline-section">
-      <div class="container is-max-desktop">
+    <section class="section pipeline-section" id="pipeline">
+      <div class="container is-max-widescreen">
         <h2 class="title is-3 has-text-centered">Pipeline</h2>
         <p class="section-lead has-text-centered">
-          Placeholder layout for the final CORGI pipeline figure and stage-by-stage explanation.
+          Overview of the CORGI reconstruction pipeline.
         </p>
-        <div class="pipeline-board">
-          <div class="pipeline-stage">
-            <span class="stage-number">01</span>
-            <h3>Single Input</h3>
-            <p>One in-the-wild dog image with arbitrary pose, viewpoint, and background.</p>
-          </div>
-          <div class="pipeline-stage">
-            <span class="stage-number">02</span>
-            <h3>CDOG</h3>
-            <p>Canonical-Driven Orbital Generation synthesizes dense pseudo multi-view observations.</p>
-          </div>
-          <div class="pipeline-stage">
-            <span class="stage-number">03</span>
-            <h3>CA-3DGS</h3>
-            <p>Consistency-Aware Deformable 3DGS models per-view generative errors around D-SMAL.</p>
-          </div>
-          <div class="pipeline-stage">
-            <span class="stage-number">04</span>
-            <h3>DCGR</h3>
-            <p>Deformation-Conditioned Generative Repair removes artifacts and sharpens novel views.</p>
-          </div>
-        </div>
-        <div class="media-placeholder pipeline-figure-placeholder">
-          <div class="placeholder-icon"><i class="fas fa-project-diagram"></i></div>
-          <p class="placeholder-title">Pipeline Figure Placeholder</p>
-          <p class="placeholder-copy">Replace this block with <code>static/images/pipeline.png</code> or the paper's final CDOG / CA-3DGS / DCGR diagram.</p>
+        <div class="pdf-panel pipeline-panel">
+          <object data="static/pdfs/pipeline.pdf" type="application/pdf" aria-label="CORGI pipeline figure">
+            <img src="static/images/pipeline.png" alt="CORGI pipeline figure" loading="lazy">
+          </object>
         </div>
       </div>
     </section>
 
-    <section class="hero is-small is-light">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
-          <p class="section-lead has-text-centered">Image carousel placeholders following the original template structure.</p>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <div class="media-placeholder result-placeholder">
-                <p class="placeholder-title">Result Image 01</p>
-                <p class="placeholder-copy">static/images/result_01.png</p>
-              </div>
-              <h2 class="subtitle has-text-centered">Caption placeholder for single-image dog reconstruction.</h2>
-            </div>
-            <div class="item">
-              <div class="media-placeholder result-placeholder">
-                <p class="placeholder-title">Result Image 02</p>
-                <p class="placeholder-copy">static/images/result_02.png</p>
-              </div>
-              <h2 class="subtitle has-text-centered">Caption placeholder for cross-view consistency and reduced artifacts.</h2>
-            </div>
-            <div class="item">
-              <div class="media-placeholder result-placeholder">
-                <p class="placeholder-title">Result Image 03</p>
-                <p class="placeholder-copy">static/images/result_03.png</p>
-              </div>
-              <h2 class="subtitle has-text-centered">Caption placeholder for breed-specific geometry and appearance detail.</h2>
-            </div>
-            <div class="item">
-              <div class="media-placeholder result-placeholder">
-                <p class="placeholder-title">Result Image 04</p>
-                <p class="placeholder-copy">static/images/result_04.png</p>
-              </div>
-              <h2 class="subtitle has-text-centered">Caption placeholder for comparison or ablation results.</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-3 has-text-centered">Video Results</h2>
-          <p class="section-lead has-text-centered">Drop the final reconstruction videos into the listed paths to activate these panels.</p>
-          <div class="video-grid">
-            <div class="media-placeholder video-card-placeholder">
-              <div class="placeholder-icon"><i class="fas fa-video"></i></div>
-              <p class="placeholder-title">Canonical Orbit</p>
-              <p class="placeholder-copy">static/videos/novel_view.mp4</p>
-            </div>
-            <div class="media-placeholder video-card-placeholder">
-              <div class="placeholder-icon"><i class="fas fa-film"></i></div>
-              <p class="placeholder-title">3DGS Flythrough</p>
-              <p class="placeholder-copy">static/videos/3dgs_flythrough.mp4</p>
-            </div>
-            <div class="media-placeholder video-card-placeholder">
-              <div class="placeholder-icon"><i class="fas fa-columns"></i></div>
-              <p class="placeholder-title">Animation Demo</p>
-              <p class="placeholder-copy">static/videos/animation_demo.mp4</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section hero is-light" id="gaussian-viewer">
+    <section class="section hero is-light" id="overview-video">
       <div class="container is-max-widescreen">
-        <h2 class="title is-3 has-text-centered">Interactive 3DGS Viewer</h2>
+        <h2 class="title is-3 has-text-centered">Overall Results</h2>
         <p class="section-lead has-text-centered">
-          SuperSplat-compatible placeholder. Publish a SuperSplat scene and paste the iframe URL below, or wire this block to a self-hosted <code>@playcanvas/supersplat-viewer</code> setup.
+          Summary video showing the overall reconstruction results.
         </p>
-        <div class="splat-layout">
-          <div class="splat-viewer-shell">
-            <div class="splat-toolbar">
-              <div class="toolbar-left">
-                <span class="toolbar-dot"></span>
-                <span class="toolbar-label">SuperSplat Preview</span>
-              </div>
-              <div class="toolbar-actions">
-                <button class="viewer-icon-btn" type="button" title="Reset view" aria-label="Reset view"><i class="fas fa-sync-alt"></i></button>
-                <button class="viewer-icon-btn" type="button" title="Toggle orbit" aria-label="Toggle orbit"><i class="fas fa-compress-arrows-alt"></i></button>
-                <button class="viewer-icon-btn" type="button" title="Fullscreen" aria-label="Fullscreen"><i class="fas fa-expand"></i></button>
-              </div>
-            </div>
-            <div class="splat-canvas-placeholder" data-supersplat-src="PASTE_SUPERSPLAT_PUBLISH_IFRAME_URL_HERE">
-              <div class="splat-orbit">
-                <div class="splat-cloud splat-cloud-a"></div>
-                <div class="splat-cloud splat-cloud-b"></div>
-                <div class="splat-cloud splat-cloud-c"></div>
-              </div>
-              <div class="splat-overlay">
-                <p class="placeholder-title">3DGS Scene Placeholder</p>
-                <p class="placeholder-copy">Replace with a SuperSplat published iframe or local <code>.splat</code>/<code>.ply</code> viewer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="splat-notes">
-            <h3>Integration Notes</h3>
-            <ul>
-              <li>Export or publish the reconstructed Gaussian scene from SuperSplat.</li>
-              <li>Paste the published iframe URL into <code>data-supersplat-src</code> or replace the placeholder with the iframe.</li>
-              <li>For self-hosting, place assets under <code>static/3dgs/</code> and initialize a viewer in this container.</li>
-            </ul>
-            <div class="code-hint">
-              <code>&lt;iframe src="SUPER_SPLAT_PUBLISH_URL"&gt;&lt;/iframe&gt;</code>
-            </div>
-          </div>
+        <div class="overview-video-wrap">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="static/videos/overview.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </section>
 
-    <section class="hero is-small">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title has-text-centered">Poster / Paper Preview</h2>
-          <div class="media-placeholder poster-placeholder">
-            <div class="placeholder-icon"><i class="fas fa-file-alt"></i></div>
-            <p class="placeholder-title">Poster or PDF Placeholder</p>
-            <p class="placeholder-copy">Replace with <code>static/pdfs/poster.pdf</code> or embed the final CORGI paper PDF.</p>
-          </div>
+    <section class="section" id="individual-results">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Individual Results</h2>
+        <p class="section-lead has-text-centered">
+          Per-example reconstruction videos.
+        </p>
+        <div class="example-video-grid">
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0059.mp4" type="video/mp4"></video><p>dog_0059</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0097.mp4" type="video/mp4"></video><p>dog_0097</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0099.mp4" type="video/mp4"></video><p>dog_0099</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0140.mp4" type="video/mp4"></video><p>dog_0140</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0169.mp4" type="video/mp4"></video><p>dog_0169</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0184.mp4" type="video/mp4"></video><p>dog_0184</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_12.mp4" type="video/mp4"></video><p>dog_12</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_13.mp4" type="video/mp4"></video><p>dog_13</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_14.mp4" type="video/mp4"></video><p>dog_14</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_16.mp4" type="video/mp4"></video><p>dog_16</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_23.mp4" type="video/mp4"></video><p>dog_23</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_26.mp4" type="video/mp4"></video><p>dog_26</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_30.mp4" type="video/mp4"></video><p>dog_30</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_42.mp4" type="video/mp4"></video><p>dog_42</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_43.mp4" type="video/mp4"></video><p>dog_43</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_47.mp4" type="video/mp4"></video><p>dog_47</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_52.mp4" type="video/mp4"></video><p>dog_52</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_53.mp4" type="video/mp4"></video><p>dog_53</p></article>
+          <article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_6.mp4" type="video/mp4"></video><p>dog_6</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <div class="bibtex-header">
-          <h2 class="title">BibTeX</h2>
-          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-            <i class="fas fa-copy"></i>
-            <span class="copy-text">Copy</span>
-          </button>
+    <section class="section hero is-light" id="animation">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Application: Animation</h2>
+        <p class="section-lead has-text-centered">
+          Driving and animation application examples.
+        </p>
+        <div class="pdf-panel animation-panel">
+          <object data="static/pdfs/animation.pdf" type="application/pdf" aria-label="CORGI animation application figure">
+            <a href="static/pdfs/animation.pdf" target="_blank">Open animation figure PDF</a>
+          </object>
         </div>
-        <pre id="bibtex-code"><code>@article{wu2026corgi,
-  title={CORGI: Consistency-Aware 3D Dog Reconstruction from a Single Image in the Wild},
-  author={Wu, Yuxiao and Zhu, Boyi and Li, Weile and Liu, Yumeng and Cai, Youcheng and Fu, XiaoMing and Liu, Ligang},
-  journal={Computational Visual Media},
-  year={2026},
-  url={https://your-domain.example/corgi}
-}</code></pre>
       </div>
     </section>
+
+    <!-- 3DGS/SuperSplat viewer disabled for the current public page.
+    <section class="section hero is-light" id="gaussian-viewer"></section>
+    -->
   </main>
 
   <footer class="footer">

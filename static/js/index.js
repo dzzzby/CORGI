@@ -119,20 +119,21 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
-function setupSuperSplatPlaceholder() {
-    const container = document.querySelector('.splat-canvas-placeholder');
-    if (!container) return;
-
-    const src = container.dataset.supersplatSrc;
-    if (!src || src.includes('PASTE_SUPERSPLAT')) return;
-
-    const iframe = document.createElement('iframe');
-    iframe.src = src;
-    iframe.title = 'Interactive 3D Gaussian Splatting viewer';
-    iframe.allow = 'fullscreen; autoplay; xr-spatial-tracking';
-    iframe.loading = 'lazy';
-    container.replaceChildren(iframe);
-}
+// 3DGS/SuperSplat viewer is disabled for the current public page.
+// function setupSuperSplatPlaceholder() {
+//     const container = document.querySelector('.splat-canvas-placeholder');
+//     if (!container) return;
+//
+//     const src = container.dataset.supersplatSrc;
+//     if (!src || src.includes('PASTE_SUPERSPLAT')) return;
+//
+//     const iframe = document.createElement('iframe');
+//     iframe.src = src;
+//     iframe.title = 'Interactive 3D Gaussian Splatting viewer';
+//     iframe.allow = 'fullscreen; autoplay; xr-spatial-tracking';
+//     iframe.loading = 'lazy';
+//     container.replaceChildren(iframe);
+// }
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
@@ -153,6 +154,6 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
-    setupSuperSplatPlaceholder();
+    // setupSuperSplatPlaceholder();
 
 })
