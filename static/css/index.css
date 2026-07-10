@@ -605,6 +605,19 @@ body {
   background: #0f172a;
 }
 
+.results-video-wrap {
+  margin-top: 1rem;
+}
+
+.section-description {
+  max-width: 1120px;
+  margin: 1.25rem auto 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: justify;
+}
+
 .example-video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

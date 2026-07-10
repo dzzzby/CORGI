@@ -134,13 +134,13 @@
                 <span class="link-block">
                   <a href="#overview-video" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-play"></i></span>
-                    <span>Overview</span>
+                    <span>Summary Video</span>
                   </a>
                 </span>
                 <span class="link-block">
                   <a href="#individual-results" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-video"></i></span>
-                    <span>Examples</span>
+                    <span>Results</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -193,15 +193,15 @@
           <img src="static/images/pipeline.png" alt="CORGI pipeline figure" loading="lazy">
           <a class="figure-source-link" href="static/pdfs/pipeline.pdf" target="_blank">Open PDF</a>
         </div>
+        <p class="section-description">
+          Overview of the CORGI framework. From a single input image, CORGI reconstructs a high-fidelity, animatable 3D dog without 3D supervision. (a) CDOG normalizes the input pose and synthesizes reliable 360-degree pseudo-multi-view images. (b) CA-3DGS lifts these 2D observations into a deformable 3DGS field anchored to a D-SMAL template, using neural deformation fields to explicitly isolate view-dependent generative errors. (c) DCGR leverages rendered deformation maps to geometrically condition a diffusion model, rectifying residual artifacts and recovering high-frequency details in a self-supervised manner.
+        </p>
       </div>
     </section>
 
     <section class="section hero is-light" id="overview-video">
       <div class="container is-max-widescreen">
-        <h2 class="title is-3 has-text-centered">Overall Results</h2>
-        <p class="section-lead has-text-centered">
-          Summary video showing the overall reconstruction results.
-        </p>
+        <h2 class="title is-3 has-text-centered">Summary Video</h2>
         <div class="overview-video-wrap">
           <video controls muted loop playsinline preload="metadata">
             <source src="static/videos/overview.mp4" type="video/mp4">
@@ -212,31 +212,15 @@
 
     <section class="section" id="individual-results">
       <div class="container is-max-widescreen">
-        <h2 class="title is-3 has-text-centered">Individual Results</h2>
-        <p class="section-lead has-text-centered">
-          Per-example reconstruction videos.
-        </p>
-        <div id="individual-carousel" class="carousel results-carousel individual-carousel">
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0059.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0097.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0099.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0140.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0169.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_0184.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_12.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_13.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_14.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_16.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_23.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_26.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_30.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_42.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_43.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_47.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_52.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_53.mp4" type="video/mp4"></video></article></div>
-          <div class="item"><article class="example-video-card"><video controls muted loop playsinline preload="metadata"><source src="static/videos/ours/dog_6.mp4" type="video/mp4"></video></article></div>
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <div class="overview-video-wrap results-video-wrap">
+          <video controls muted loop playsinline preload="metadata">
+            <source src="static/videos/results.mp4" type="video/mp4">
+          </video>
         </div>
+        <p class="section-description">
+          CORGI achieves state-of-the-art performance on single-image 3D dog reconstruction, generalizing across diverse dog breeds, poses, viewpoints, and in-the-wild backgrounds. The reconstructed assets are geometrically accurate, visually coherent, and fully animatable, making them ready for downstream applications.
+        </p>
       </div>
     </section>
 
